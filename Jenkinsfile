@@ -80,7 +80,7 @@ pipeline {
                 # nothing is left listening on the API port.
                 fuser -k 5000/tcp 2>/dev/null || true
             '''
-            archiveArtifacts artifacts: 'house_model.pkl, app.log', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'uptor_model.pkl, app.log', allowEmptyArchive: true
         }
         success {
             echo 'Build, train, and smoke test succeeded.'
